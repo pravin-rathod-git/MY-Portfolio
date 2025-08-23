@@ -1,127 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pravin Rathod - Resume</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet' />
+  <title>Pravin Rathod Portfolio</title>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <h1>PRAVIN RATHOD</h1>
-      <div class="contact">
-        <span>+91 8446085203</span> &bull;
-        <a href="mailto:pr819270@gmail.com">pr819270@gmail.com</a> &bull;
-        <a href="https://www.linkedin.com/in/pravin-rathod-237418303/">LinkedIn</a> &bull;
-        <a href="https://github.com/pravin-rathod-git">GitHub</a> &bull;
-        <a href="https://pravin-rathod-git.github.io/MY-Portfolio/">Portfolio</a>
-      </div>
-    </header>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript" src="assets/js/smtp.js"></script>
 
-    <section>
-      <h2>SUMMARY</h2>
-      <p>
-        Results-driven Software Developer with hands-on experience in Full-Stack Web Development and AI/ML applications. Proficient in designing, developing, and deploying scalable applications using React.js, Angular, Node.js, Python, and MongoDB. Experienced with Firebase and Cloudinary for cloud deployment. Strong foundation in Data Structures & Algorithms (DSA), REST API development, and Database Management Systems (DBMS). Passionate about building impactful solutions, optimizing system performance, and collaborating within Agile environments.
-      </p>
-    </section>
-    
-    <section>
-      <h2>EXPERIENCE</h2>
-      <div class="exp">
-        <div class="role"><span>Machine Learning Intern at TechSaksham</span><span class="duration">Jan 2025 – Mar 2025 | Remote</span></div>
-        <ul>
-          <li>Designed and implemented AI models for supervised learning, improving model accuracy through optimized feature engineering.</li>
-          <li>Applied data preprocessing, visualization, and evaluation techniques using Python, Pandas, NumPy, scikit-learn, Matplotlib.</li>
-          <li>Collaborated in a remote Agile environment, presenting solutions to real-world AI problems.</li>
+  <!--===== HEADER =====-->
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <div>
+        <a href="#" class="nav__logo">Pravin/a>
+      </div>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#certifications" class="nav__link">Certifications</a></li>
+          <li class="nav__item"><a href="#achievements-gallery" class="nav__link">Gallery</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </div>
-      <div class="exp">
-        <div class="role"><span>Tech Team Lead</span><span class="duration">Aug 2024-25 – Present | ITSA On-Campus, VPKBIET, Baramati, India</span></div>
-        <ul>
-          <li>Successfully organized flagship events such as hackathons, coding competitions, and technical quizzes, ensuring smooth coordination across departments.</li>
-          <li>Directed 20+ team members in executing college-level technical events including hackathons, coding competitions, and quizzes with 200+ participants.</li>
-          <li>Managed end-to-end event workflows — planning, resource allocation, scheduling, execution, and post-event analysis.</li>
-        </ul>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class='bx bx-menu'></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <!--===== HOME =====-->
+    <section class="home bd-grid" id="home">
+      <div class="home__data">
+        <h1 class="home__title">Hi, I'am <span class="home__title-color">Pravin</span><br> IT Engineering<br> Student</h1>
+        <a href="assets/Pravin Rathod CV May 2025.pdf" class="button">Resume</a>
+      </div>
+
+      <div class="home__social">
+        <a href="https://www.linkedin.com/in/adiiidg" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://www.github.com/adiidg" class="home__social-icon"><i class='bx bxl-github'></i></a>
+      </div>
+
+      <div class="home__img">
+       <img src="./assets/img/Portfolio Photo.jpg" alt="Pravin's Photo"
+     class="home__blob-img"
+     style="border-radius: 50%; border: 5px solid skyblue; width: 350px; height: 350px; object-fit: cover; margin: 100px;" />
+
       </div>
     </section>
 
-    <section>
-      <h2>EDUCATION</h2>
-      <div class="ed">
-        <strong>Bachelor of Engineering, Information Technology</strong> <span class="ed-date">2022 - 2026</span><br>
-        Vidya Pratishthan’s Kamalnayan Bajaj Institute of Engineering and Technology<br>
-        CGPA: 8.67/10.0
-      </div>
-      <div class="ed">
-        <strong>Higher Secondary Certificate (HSC)</strong> <span class="ed-date">Completed 2022</span><br>
-        Kudal High School and Junior College Kudal<br>
-        Percentage: 80.5%
-      </div>
-      <div class="ed">
-        <strong>Secondary School Certificate (SSC)</strong> <span class="ed-date">Completed 2020</span><br>
-        S K Patil Vidyamandir Kelus<br>
-        Percentage: 96.40%
-      </div>
-    </section>
-
-    <section>
-      <h2>TECHNICAL SKILLS</h2>
-      <ul class="skills">
-        <li><strong>Programming Languages:</strong> Python, Java, C++, JavaScript, TypeScript.</li>
-        <li><strong>Web & Frameworks:</strong> Node.js, Express.js.</li>
-        <li><strong>Databases:</strong> MySQL, MongoDB.</li>
-        <li><strong>Cloud & Tools:</strong> Firebase, Cloudinary, Git/GitHub, Postman.</li>
-        <li><strong>Libraries & APIs:</strong> scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Socket.io, JWT.</li>
-        <li><strong>Core Competencies:</strong> REST API Development, OOP, Responsive UI Design, Agile, Version Control, Data Structures and Algorithms.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>PROJECTS</h2>
-      <div class="proj">
-        <strong>AI-Powered Medical Diagnosis System</strong> | <a href="https://github.com/pravin-rathod-git/AI-Powered-Medical-Diagnosis-System/tree/main">Github</a><br>
-        <span class="proj-stack">Tech Stack:</span> Python, scikit-learn, Pandas, NumPy, Streamlit, Matplotlib/Seaborn<br>
-        Built a disease prediction system using Logistic Regression.<br>
-        Developed an interactive Streamlit web app for real-time results based on clinical inputs.
-      </div>
-      <div class="proj">
-        <strong>Ride Booking Web Application</strong> | <a href="https://github.com/pravin-rathod-git/Ride-Booking-Website">Github</a><br>
-        <span class="proj-stack">Tech Stack:</span> React.js, Node.js, Express.js, MongoDB, JWT<br>
-        Designed a full-stack ride booking platform with authentication, ride requests, and driver matching.
-      </div>
-      <div class="proj">
-        <strong>Vybe – Full-Stack Social Media Platform</strong> | <a href="https://github.com/pravin-rathod-git/Social-Media-Website">Github</a><br>
-        <span class="proj-stack">Tech Stack:</span> React.js, Redux Toolkit, Node.js, Express.js, MongoDB, JWT, Cloudinary, Socket.io<br>
-        Developed a social media web app with posts, stories, loops (reels), likes, comments, saves, and real-time chat.
+    <!--===== ABOUT =====-->
+    <section class="about section" id="about">
+      <h2 class="section-title">About</h2>
+      <div class="about__container bd-grid">
+        <div class="about__img">
+          <img src="./assets/img/Portfolio Photo.jpg" alt="">
+        </div>
+        <div>
+          <h2 class="about__subtitle">I'am Pravin</h2>
+          <p class="about__text">
+            Seeking an Internship as I am having foundation in AngularJS, PHP, HTML, CSS, JavaScript, and ReactJS.
+            Skilled in Python, Java, and JDBC, with experience in deploying sites on GitHub, Firebase and AWS. Eager to
+            apply web development skills and expand into AI & Data Science in a collaborative team environment. Quick
+            to learn and adapt, with a good understanding of various programming languages. <br><br>
+            I have HackerRank certifications and badges in SQL and Python and was named Intern of the Month at Capnit
+            Technologies. I led a team at an NSS camp, and was a runner-up in the Someshwar Techathon for 2023-24, and
+            organized a college event for 2,000 attendees.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2>CERTIFICATIONS</h2>
-      <ul>
-        <li>Machine Learning Intern at TechSaksham</li>
-        <li>DSA 160 Days Challenge – GeeksforGeeks</li>
-        <li>Python Essentials by Cisco Networking Academy</li>
-        <li>View All Certifications: <a href="https://drive.google.com/drive/folders/1QM_E2z9-Oak8P33-NyghsLMSIw5ZXx9W?usp=drive_link">Link</a></li>
-      </ul>
-    </section>
+    <!--===== SKILLS =====-->
+    <!-- ... no name here ... -->
 
-    <section>
-      <h2>KEY ACHIEVEMENTS</h2>
-      <ul>
-        <li>Organized a Fresher’s Party, managing logistics and coordination for over 2,000 attendees.</li>
-        <li>Led a core team of 20+ members in planning and executing college-level technical events for 200+ participants.</li>
-      </ul>
-    </section>
+    <!--===== EXPERIENCE =====-->
+    <!-- ... no name here ... -->
 
-    <section>
-      <h2>LANGUAGES</h2>
-      <ul>
-        <li>English (Proficient)</li>
-        <li>Hindi (Proficient)</li>
-        <li>Marathi (Native)</li>
-      </ul>
-    </section>
-  </div>
+    <!--===== PROJECTS =====-->
+    <!-- unchanged usernames -->
+
+    <!--===== CERTIFICATIONS =====-->
+    <!-- unchanged usernames -->
+
+    <!--===== GALLERY =====-->
+    <!-- no name used -->
+
+    <!--===== CONTACT =====-->
+    <!-- no name used -->
+
+  </main>
+
+  <!--===== FOOTER =====-->
+  <footer class="footer">
+    <p class="footer__title">PRAVIN RATHOD</p>
+    <div class="footer__social">
+      <a href="https://www.instagram.com/adii.dg?igsh=NTc4MTIwNjQ2YQ==" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+      <a href="https://x.com/adii_dg?t=pdGYus21ttCFbUQ8Ogo4Ag&s=08" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+    </div>
+    <p class="footer__copy">adityagurav54@gmail.com</p>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
