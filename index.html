@@ -1,113 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet' />
-  <title>Pravin Rathod Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Pravin Rathod Portfolio</title>
 </head>
 
 <body>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script type="text/javascript" src="assets/js/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="assets/js/smtp.js"></script>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">pravin-rathod</a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#certifications" class="nav__link">Certifications</a></li>
+                    <li class="nav__item"><a href="#achievements-gallery" class="nav__link">Gallery</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
 
-  <!--===== HEADER =====-->
-  <header class="l-header">
-    <nav class="nav bd-grid">
-      <div>
-        <a href="#" class="nav__logo">Pravin/a>
-      </div>
-      <div class="nav__menu" id="nav-menu">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-          <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#certifications" class="nav__link">Certifications</a></li>
-          <li class="nav__item"><a href="#achievements-gallery" class="nav__link">Gallery</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-        </ul>
-      </div>
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+    <div class="home__data">
+        <h1 class="home__title">Hi, I'm <span class="home__title-color">Pravin</span><br> Software Developer<br> 
+        </h1>
+        <a href="https://pravin-rathod-git.github.io/My_Resume/" class="button" target="_blank">Resume</a>
+    </div>
+    <div class="home__social">
+        <a href="https://www.linkedin.com/in/pravin-rathod-237418303/" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://github.com/pravin-rathod-git" class="home__social-icon" target="_blank"><i class='bx bxl-github'></i></a>
+    </div>
+    <div class="home__img">
+        <!-- Direct image, no svg -->
+        <img src="assets/img/Portfolio Photo.jpg" alt="Pravin Rathod" style="width:280px;height: 280px; border-radius:50%; box-shadow:0 4px 30px rgba(25,118,210,0.1);margin-left: 100px;margin-bottom: 100px;" />
+    </div>
+</section>
 
-      <div class="nav__toggle" id="nav-toggle">
-        <i class='bx bx-menu'></i>
-      </div>
-    </nav>
-  </header>
 
-  <main class="l-main">
-    <!--===== HOME =====-->
-    <section class="home bd-grid" id="home">
-      <div class="home__data">
-        <h1 class="home__title">Hi, I'am <span class="home__title-color">Pravin</span><br> IT Engineering<br> Student</h1>
-        <a href="https://pravin-rathod-git.github.io/My_Resume/" class="button">Resume</a>
-      </div>
+        <!--===== ABOUT =====-->
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/Portfolio Photo.jpg" alt="Pravin Rathod">
+                </div>
+                <div>
+                    <h2 class="about__subtitle">I'm Pravin Rathod</h2>
+                    <p class="about__text">
+                        Results-driven Software Developer with hands-on experience in Full-Stack Web Development and AI/ML. Proficient in React.js, Angular, Node.js, Python, MongoDB, Firebase, and Cloudinary. Strong foundation in DSA, REST APIs, and DBMS. Passionate about building impactful, scalable solutions and collaborating in Agile environments.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-      <div class="home__social">
-        <a href="https://www.linkedin.com/in/pravin-rathod-237418303/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-        <a href="https://github.com/pravin-rathod-git" class="home__social-icon"><i class='bx bxl-github'></i></a>
-      </div>
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills__container bd-grid">
+                <div>
+                    <h2 class="skills__subtitle">Technical Skills</h2>
+                    <p class="skills__text">Proficient in a wide range of tools and technologies; always learning and evolving.</p>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-python skills__icon'></i>
+                            <span class="skills__name">Python, Java, C++, JavaScript, TypeScript</span>
+                        </div>
+                        <div class="skills__bar skills__python"></div>
+                        <div>
+                            <span class="skills__percentage">90%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-react skills__icon'></i>
+                            <span class="skills__name">React.js, Angular, Node.js, Express.js</span>
+                        </div>
+                        <div class="skills__bar skills__react"></div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxs-data skills__icon'></i>
+                            <span class="skills__name">MongoDB, MySQL</span>
+                        </div>
+                        <div class="skills__bar skills__db"></div>
+                        <div>
+                            <span class="skills__percentage">83%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bx-cloud skills__icon'></i>
+                            <span class="skills__name">Firebase, Cloudinary, Postman, Git/GitHub</span>
+                        </div>
+                        <div class="skills__bar skills__cloud"></div>
+                        <div>
+                            <span class="skills__percentage">80%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bx-code-alt skills__icon'></i>
+                            <span class="skills__name">REST API, OOP, DSA, Agile</span>
+                        </div>
+                        <div class="skills__bar skills__api"></div>
+                        <div>
+                            <span class="skills__percentage">84%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="home__img">
-       <img src="./assets/img/Portfolio Photo.jpg" alt="Pravin's Photo"
-     class="home__blob-img"
-     style="border-radius: 50%; border: 5px solid skyblue; width: 350px; height: 350px; object-fit: cover; margin: 100px;" />
+        <!--===== EXPERIENCE =====-->
+        <section class="experience section" id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience__container bd-grid">
+                <div class="experience__content">
+                    <h3 class="experience__title">Machine Learning Intern - <span class="experience__company">TechSaksham</span></h3>
+                    <p class="experience__time">Jan 2025 – Mar 2025 (Remote)</p>
+                    <ul class="experience__description">
+                        <li>Designed and implemented AI models for supervised learning, improving model accuracy through optimized feature engineering.</li>
+                        <li>Applied data preprocessing, visualization, and evaluation techniques using Python, Pandas, NumPy, scikit-learn, Matplotlib.</li>
+                        <li>Collaborated in a remote Agile environment, presenting solutions to real-world AI problems.</li>
+                    </ul>
+                </div>
+                <div class="experience__content">
+                    <h3 class="experience__title">Tech Team Lead - <span class="experience__company">ITSA On-Campus, VPKBIET</span></h3>
+                    <p class="experience__time">Aug 2024 – Present</p>
+                    <ul class="experience__description">
+                        <li>Organized flagship events: hackathons, coding competitions, technical quizzes.</li>
+                        <li>Directed 20+ team members for college-level events (200+ participants).</li>
+                        <li>Managed end-to-end workflows: planning, allocation, scheduling, execution, and post-event analysis.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-      </div>
-    </section>
+        <!--===== PROJECTS =====-->
+        <section class="projects section" id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="work__container bd-grid">
+                <div>
+                    <a href="https://github.com/pravin-rathod-git/Medical-Diagnosis-System" target="_blank" class="work__img">
+                        <img src="assets/img/medical.png" alt="AI-Powered Medical Diagnosis">
+                    </a>
+                    <p style="margin-top: 10px;">AI-Powered Medical Diagnosis System: Built a disease prediction system (logistic regression), with an interactive Streamlit web app for real-time results.</p>
+                </div>
+                <div>
+                    <a href="https://github.com/pravin-rathod-git/Ride-Booking" target="_blank" class="work__img">
+                        <img src="assets/img/ride.png" alt="Ride Booking Web App">
+                    </a>
+                    <p style="margin-top: 10px;">Ride Booking Web App: Full-stack platform with authentication, requests, and driver matching.</p>
+                </div>
+                <div>
+                    <a href="https://github.com/pravin-rathod-git/Social-Media-Website" target="_blank" class="work__img">
+                        <img src="assets/img/social.png" alt="Vybe Social Media Platform">
+                    </a>
+                    <p style="margin-top: 10px;">Vybe: Social Media Web App with posts, stories, loops (reels), likes, comments, saves, real-time chat.</p>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
 
-    <!--===== ABOUT =====-->
-    <section class="about section" id="about">
-      <h2 class="section-title">About</h2>
-      <div class="about__container bd-grid">
-        <div class="about__img">
-          <img src="./assets/img/Portfolio Photo.jpg" alt="">
+        <!--===== CERTIFICATIONS =====-->
+        <section class="certifications section" id="certifications">
+            <h2 class="section-title">Certifications & Honors</h2>
+            <div class="certifications__container bd-grid">
+                <ul class="certifications__list">
+                    <li>
+                        <a href="#" target="_blank" class="certification__link">
+                            Machine Learning Intern – TechSaksham
+                        </a>
+                    </li>
+                    <li>
+                        <span class="certification__no_link">DSA 160 Days Challenge – GeeksforGeeks</span>
+                    </li>
+                    <li>
+                        <span class="certification__no_link">Python Essentials – Cisco Networking Academy</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--===== ACHIEVEMENTS GALLERY =====-->
+        <section class="achievements-gallery section" id="achievements-gallery">
+            <h2 class="section-title">Achievements Gallery</h2>
+            <div class="work__container bd-grid">
+                <!-- Upload images of certificates, events, or achievements in assets/img/gallery/ -->
+                <div class="work__img"><img src="assets/img/gallery/achievement1.jpg" alt="Achievement 1"></div>
+                <div class="work__img"><img src="assets/img/gallery/achievement2.jpg" alt="Achievement 2"></div>
+                <div class="work__img"><img src="assets/img/gallery/achievement3.jpg" alt="Achievement 3"></div>
+                <!-- Add more images as desired -->
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact__container bd-grid">
+                <form class="contact__form" onsubmit="sendEmail(); reset(); return false;">
+                    <input type="text" placeholder="Name" class="contact__input" id="name">
+                    <input type="mail" placeholder="Email" class="contact__input" id="maill">
+                    <textarea cols="0" rows="10" class="contact__input" id="message"></textarea>
+                    <input type="button" value="Submit" class="contact__button button"
+                        onclick="sendEmail(); reset(); return false;">
+                </form>
+                <p>Email: <a href="mailto:pr819270@gmail.com">pr819270@gmail.com</a> &nbsp; | &nbsp; Phone: +91 8446085203</p>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">PRAVIN RATHOD</p>
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/pravin-rathod-237418303/" class="footer__icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/pravin-rathod-git" class="footer__icon" target="_blank"><i class='bx bxl-github'></i></a>
         </div>
-        <div>
-          <h2 class="about__subtitle">I'am Pravin</h2>
-          <p class="about__text">
-            Seeking an Internship as I am having foundation in AngularJS, PHP, HTML, CSS, JavaScript, and ReactJS.
-            Skilled in Python, Java, and JDBC, with experience in deploying sites on GitHub, Firebase and AWS. Eager to
-            apply web development skills and expand into AI & Data Science in a collaborative team environment. Quick
-            to learn and adapt, with a good understanding of various programming languages. <br><br>
-            I have HackerRank certifications and badges in SQL and Python and was named Intern of the Month at Capnit
-            Technologies. I led a team at an NSS camp, and was a runner-up in the Someshwar Techathon for 2023-24, and
-            organized a college event for 2,000 attendees.
-          </p>
-        </div>
-      </div>
-    </section>
+        <p class="footer__copy">pr819270@gmail.com</p>
+    </footer>
 
-    <!--===== SKILLS =====-->
-    <!-- ... no name here ... -->
-
-    <!--===== EXPERIENCE =====-->
-    <!-- ... no name here ... -->
-
-    <!--===== PROJECTS =====-->
-    <!-- unchanged usernames -->
-
-    <!--===== CERTIFICATIONS =====-->
-    <!-- unchanged usernames -->
-
-    <!--===== GALLERY =====-->
-    <!-- no name used -->
-
-    <!--===== CONTACT =====-->
-    <!-- no name used -->
-
-  </main>
-
-  <!--===== FOOTER =====-->
-  <footer class="footer">
-    <p class="footer__title">PRAVIN RATHOD</p>
-    
-    <p class="footer__copy">pr819270@gmail.com</p>
-  </footer>
-
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="assets/js/main.js"></script>
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
