@@ -1,235 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <title>Pravin Rathod Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        space: '#070913',
+                        card: '#0c101e',
+                        borderline: '#1e243b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar to match the dark theme */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #070913; }
+        ::-webkit-scrollbar-thumb { background: #1e243b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a855f7; }
+    </style>
+    <title>Pravin Rathod | Software Developer</title>
 </head>
 
-<body>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script type="text/javascript" src="assets/js/smtp.js"></script>
-    <!--===== HEADER =====-->
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">pravin-rathod</a>
+<body class="bg-space text-gray-300 font-sans relative overflow-x-hidden antialiased">
+    
+    <div class="fixed top-[-10%] left-1/2 transform -translate-x-1/2 w-[800px] h-[500px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-indigo-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+
+    <header class="fixed top-0 left-0 w-full bg-space/80 backdrop-blur-md border-b border-borderline z-50 transition-all duration-300">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tighter text-white">
+                pravin<span class="text-purple-500">.rathod</span>
+            </a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="#home" class="hover:text-purple-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-purple-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
             </div>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="#certifications" class="nav__link">Certifications</a></li>
-                    
-                </ul>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
+            <a href="mailto:pr819270@gmail.com" class="hidden md:inline-block border border-purple-500/50 text-purple-400 px-4 py-2 rounded hover:bg-purple-500/10 transition-all text-sm">
+                Say Hello
+            </a>
         </nav>
     </header>
 
-    <main class="l-main">
-        <!--===== HOME =====-->
-        <section class="home bd-grid" id="home">
-    <div class="home__data">
-        <h1 class="home__title">Hi, I'm <span class="home__title-color">Pravin</span><br> Software Developer<br> 
-        </h1>
-        <a href="https://pravin-rathod-git.github.io/My_Resume/" class="button" target="_blank">Resume</a>
-    </div>
-    <div class="home__social">
-        <a href="https://www.linkedin.com/in/pravin-rathod-237418303/" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-        <a href="https://github.com/pravin-rathod-git" class="home__social-icon" target="_blank"><i class='bx bxl-github'></i></a>
-    </div>
-    <div class="home__img">
-        <!-- Direct image, no svg -->
-        <img src="assets/img/Portfolio Photo.jpg" alt="Pravin Rathod" style="width:280px;height: 280px; border-radius:50%; box-shadow:0 4px 30px rgba(25,118,210,0.1);margin-left: 100px;margin-bottom: 100px;" />
-    </div>
-</section>
-
-
-        <!--===== ABOUT =====-->
-        <section class="about section" id="about">
-            <h2 class="section-title">About</h2>
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/Portfolio Photo.jpg" alt="Pravin Rathod">
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        
+        <section id="home" class="min-h-[80vh] flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+            <div class="flex-1 space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-900/10 shadow-[0_0_15px_rgba(168,85,247,0.1)]">
+                    <div class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)]"></div>
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-purple-300 uppercase">Available for work</span>
                 </div>
-                <div>
-                    <h2 class="about__subtitle">I'm Pravin Rathod</h2>
-                    <p class="about__text">
-                        Results-driven Software Developer with hands-on experience in Full-Stack Web Development and AI/ML. Proficient in React.js, Node.js, Python, MongoDB, Firebase, and Cloudinary. Strong foundation in DSA, REST APIs, and DBMS. Passionate about building impactful, scalable solutions and collaborating in Agile environments.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!--===== SKILLS =====-->
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Technical Skills</h2>
-                    <p class="skills__text">Proficient in a wide range of tools and technologies; always learning and evolving.</p>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-python skills__icon'></i>
-                            <span class="skills__name">Python, Java, C++, JavaScript, TypeScript</span>
-                        </div>
-                        <div class="skills__bar skills__python"></div>
-                        <div>
-                            <span class="skills__percentage">90%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-react skills__icon'></i>
-                            <span class="skills__name">React.js, Angular, Node.js, Express.js</span>
-                        </div>
-                        <div class="skills__bar skills__react"></div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxs-data skills__icon'></i>
-                            <span class="skills__name">MongoDB, MySQL</span>
-                        </div>
-                        <div class="skills__bar skills__db"></div>
-                        <div>
-                            <span class="skills__percentage">83%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bx-cloud skills__icon'></i>
-                            <span class="skills__name">Firebase, Cloudinary, Postman, Git/GitHub</span>
-                        </div>
-                        <div class="skills__bar skills__cloud"></div>
-                        <div>
-                            <span class="skills__percentage">80%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bx-code-alt skills__icon'></i>
-                            <span class="skills__name">REST API, OOP, DSA, Agile</span>
-                        </div>
-                        <div class="skills__bar skills__api"></div>
-                        <div>
-                            <span class="skills__percentage">84%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--===== EXPERIENCE =====-->
-        <section class="experience section" id="experience">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience__container bd-grid">
-                <div class="experience__content">
-                    <h3 class="experience__title">Machine Learning Intern - <span class="experience__company">TechSaksham</span></h3>
-                    <p class="experience__time">Jan 2025 – Mar 2025 (Remote)</p>
-                    <ul class="experience__description">
-                        <li>Designed and implemented AI models for supervised learning, improving model accuracy through optimized feature engineering.</li>
-                        <li>Applied data preprocessing, visualization, and evaluation techniques using Python, Pandas, NumPy, scikit-learn, Matplotlib.</li>
-                        <li>Collaborated in a remote Agile environment, presenting solutions to real-world AI problems.</li>
-                    </ul>
-                </div>
-                <div class="experience__content">
-                    <h3 class="experience__title">Tech Team Lead - <span class="experience__company">ITSA On-Campus, VPKBIET</span></h3>
-                    <p class="experience__time">Aug 2024 – Present</p>
-                    <ul class="experience__description">
-                        <li>Organized flagship events: hackathons, coding competitions, technical quizzes.</li>
-                        <li>Directed 15 team members for college-level events (200+ participants).</li>
-                        <li>Managed end-to-end workflows: planning, allocation, scheduling, execution, and post-event analysis.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!--===== PROJECTS =====-->
-        <section class="projects section" id="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="work__container bd-grid">
-                <div>
-                    <a href="https://github.com/pravin-rathod-git/AI-Powered-Medical-Diagnosis-System" target="_blank" class="work__img">
-                        <img src="assets/img/Diagnosis.png" alt="AI-Powered Medical Diagnosis">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight drop-shadow-lg">
+                    Hi, I'm <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Pravin Rathod</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-xl font-light">
+                    Software Developer — Full Stack (MERN) & AI/ML Enthusiast. Building scalable enterprise solutions and production-ready Generative AI applications.
+                </p>
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4">
+                    <a href="https://drive.google.com/file/d/1AU5VA8e_2i5jTpXqPHUpVydD_BGy3SNN/view?usp=drive_link" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-8 rounded-lg transition-all shadow-[0_0_15px_rgba(168,85,247,0.3)] hover:shadow-[0_0_25px_rgba(168,85,247,0.5)]">
+                        View Resume
                     </a>
-                    <p style="margin-top: 10px;">AI-Powered Medical Diagnosis System: Built a disease prediction system (logistic regression), with an interactive Streamlit web app for real-time results.</p>
+                    <div class="flex gap-4 ml-4">
+                        <a href="https://github.com/pravin-rathod-git" target="_blank" class="text-gray-400 hover:text-white text-3xl transition-colors"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/pravin-rathod-237418303/" target="_blank" class="text-gray-400 hover:text-[#0a66c2] text-3xl transition-colors"><i class='bx bxl-linkedin-square'></i></a>
+                    </div>
                 </div>
-                <div>
-                    <a href="https://github.com/pravin-rathod-git/Ride-Booking-Website" target="_blank" class="work__img">
-                        <img src="assets/img/Uber-Clone-Script.webp"g" alt="Ride Booking Web App">
-                    </a>
-                    <p style="margin-top: 10px;">Ride Booking Web App: Full-stack platform with authentication, requests, and driver matching.</p>
-                </div>
-                <div>
-                    <a href="https://github.com/pravin-rathod-git/Social-Media-Website" target="_blank" class="work__img">
-                        <img src="assets/img/Screenshot 2025-10-02 134530.png" alt="Vybe Social Media Platform">
-                    </a>
-                    <p style="margin-top: 10px;">Vybe: Social Media Web App with posts, stories, loops (reels), likes, comments, saves, real-time chat.</p>
-                </div>
-                <!-- Add more projects as needed -->
+            </div>
+            <div class="flex-1 flex justify-center relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-indigo-600/20 blur-3xl rounded-full"></div>
+                <img src="assets/img/Portfolio Photo.jpg" alt="Pravin Rathod" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-borderline shadow-2xl relative z-10 filter grayscale hover:grayscale-0 transition-all duration-500" />
             </div>
         </section>
 
-        <!--===== CERTIFICATIONS =====-->
-        <section class="certifications section" id="certifications">
-            <h2 class="section-title">Certifications & Honors</h2>
-            <div class="certifications__container bd-grid">
-                <ul class="certifications__list">
-                    <li>
-                        <a href="#" target="_blank" class="certification__link">
-                            Machine Learning Intern – TechSaksham
-                        </a>
-                    </li>
-                    <li>
-                        <span class="certification__no_link">DSA 160 Days Challenge – GeeksforGeeks</span>
-                    </li>
-                    <li>
-                        <span class="certification__no_link">Python Essentials – Cisco Networking Academy</span>
-                    </li>
-                    <li>
-                        <a href="https://drive.google.com/drive/folders/1QM_E2z9-Oak8P33-NyghsLMSIw5ZXx9W">Link</a>
-                    </li>
-                </ul>
+        <section id="skills" class="py-20 border-t border-borderline/50">
+            <h2 class="text-3xl font-bold text-white mb-2">Technical Arsenal</h2>
+            <p class="text-sm text-gray-500 mb-10 tracking-widest uppercase">Technologies I work with</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-card border border-borderline rounded-2xl p-6 shadow-xl relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <i class='bx bxl-python text-4xl text-purple-400 mb-4'></i>
+                    <h3 class="text-xl font-semibold text-white mb-4">AI & Machine Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">Python</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">LLM Integrations</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">RAG Architecture</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">LangChain</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">PyTorch</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">Edge AI</span>
+                    </div>
+                </div>
+
+                <div class="bg-card border border-borderline rounded-2xl p-6 shadow-xl relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <i class='bx bxl-react text-4xl text-indigo-400 mb-4'></i>
+                    <h3 class="text-xl font-semibold text-white mb-4">Full Stack (MERN)</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">React.js</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">Node.js</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">Express.js</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">MongoDB</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">REST APIs</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">Redux Toolkit</span>
+                    </div>
+                </div>
+
+                <div class="bg-card border border-borderline rounded-2xl p-6 shadow-xl relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <i class='bx bx-code-alt text-4xl text-cyan-400 mb-4'></i>
+                    <h3 class="text-xl font-semibold text-white mb-4">Core Engineering</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">Java / C++</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">Data Structures (DSA)</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">OOP</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">AWS Cloud</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">Git/GitHub</span>
+                        <span class="text-xs bg-space border border-borderline px-3 py-1 rounded-full text-gray-300">MySQL</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!--===== ACHIEVEMENTS GALLERY =====-->
+        <section id="experience" class="py-20 border-t border-borderline/50">
+            <h2 class="text-3xl font-bold text-white mb-2">Experience</h2>
+            <p class="text-sm text-gray-500 mb-10 tracking-widest uppercase">My professional journey</p>
+            
+            <div class="space-y-6">
+                <div class="bg-card border border-borderline rounded-xl p-6 md:p-8 flex flex-col md:flex-row justify-between gap-4 group hover:border-purple-500/50 transition-colors">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Machine Learning Intern</h3>
+                        <p class="text-indigo-400 text-sm mb-4 font-mono">TechSaksham | Remote</p>
+                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-2">
+                            <li>Developed and optimized supervised learning models improving prediction accuracy by 10%.</li>
+                            <li>Applied data preprocessing, feature engineering and visualization using Pandas, NumPy and Matplotlib.</li>
+                            <li>Collaborated in an Agile setup, delivering weekly project updates and performance evaluations.</li>
+                        </ul>
+                    </div>
+                    <div class="text-sm text-gray-500 font-mono whitespace-nowrap">Jan 2025 – Mar 2025</div>
+                </div>
 
-        <!--===== CONTACT =====-->
-        <section class="contact section" id="contact">
-            <div>
-                <p>Email: <a href="mailto:pr819270@gmail.com">pr819270@gmail.com</a> &nbsp; | &nbsp; Phone: +91 8446085203</p>
+                <div class="bg-card border border-borderline rounded-xl p-6 md:p-8 flex flex-col md:flex-row justify-between gap-4 group hover:border-indigo-500/50 transition-colors">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Tech Team Lead</h3>
+                        <p class="text-indigo-400 text-sm mb-4 font-mono">ITSA On-Campus, VPKBIET | Baramati, India</p>
+                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-2">
+                            <li>Directed a 15-member technical team and organized college-level hackathons and coding contests with 200+ participants.</li>
+                            <li>Streamlined technical event workflows—planning, scheduling, resource allocation, and analysis.</li>
+                            <li>Enhanced event engagement and outreach by 40% through technical automation tools.</li>
+                        </ul>
+                    </div>
+                    <div class="text-sm text-gray-500 font-mono whitespace-nowrap">Aug 2024 – Present</div>
+                </div>
             </div>
+        </section>
+
+<section id="projects" class="py-20 border-t border-borderline/50">
+            <h2 class="text-3xl font-bold text-white mb-2">Featured Work</h2>
+            <p class="text-sm text-gray-500 mb-10 tracking-widest uppercase">Projects & Applications</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-card border border-borderline rounded-2xl overflow-hidden shadow-2xl relative group hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-300 hover:-translate-y-1">
+                    <img src="assets/img/enterprice-cost-estimator.png" alt="Enterprise Context Estimator" class="w-full h-48 object-cover object-top opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-lg font-bold text-white">Enterprise Context Estimator</h3>
+                            <div class="flex gap-3 text-gray-400">
+                                <a href="https://github.com/pravin-rathod-git/enterprise-context-estimator" target="_blank" class="hover:text-white transition-colors" title="Source Code"><i class='bx bxl-github text-xl'></i></a>
+                                <a href="https://enterprise-context-estimator.vercel.app/" target="_blank" class="hover:text-purple-400 transition-colors" title="Live Website"><i class='bx bx-link-external text-xl'></i></a>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 h-16 line-clamp-3">A fully client-side token, cost, and RAG chunking estimator for orchestrating complex multi-agent LLM systems. Built with React and Tailwind CSS.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] bg-purple-900/20 text-purple-300 border border-purple-500/30 px-2 py-1 rounded uppercase tracking-wider">React</span>
+                            <span class="text-[10px] bg-purple-900/20 text-purple-300 border border-purple-500/30 px-2 py-1 rounded uppercase tracking-wider">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card border border-borderline rounded-2xl overflow-hidden shadow-2xl relative group hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-300 hover:-translate-y-1">
+                    <img src="assets/img/Screenshot 2025-10-02 134530.png" alt="Vybe Social Media Platform" class="w-full h-48 object-cover object-top opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-lg font-bold text-white">Vybe - AI Social Platform</h3>
+                            <div class="flex gap-3 text-gray-400">
+                                <a href="https://github.com/pravin-rathod-git/Social-Media-Website" target="_blank" class="hover:text-white transition-colors" title="Source Code"><i class='bx bxl-github text-xl'></i></a>
+                                <a href="https://vybe-social-media-gemini-1.onrender.com/signin" target="_blank" class="hover:text-indigo-400 transition-colors" title="Live Website"><i class='bx bx-link-external text-xl'></i></a>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 h-16 line-clamp-3">Full-stack platform with posts, stories, and real-time chat. Integrated Gemini AI for dynamic caption generation and chat summarization.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] bg-indigo-900/20 text-indigo-300 border border-indigo-500/30 px-2 py-1 rounded uppercase tracking-wider">MERN Stack</span>
+                            <span class="text-[10px] bg-indigo-900/20 text-indigo-300 border border-indigo-500/30 px-2 py-1 rounded uppercase tracking-wider">Gemini API</span>
+                            <span class="text-[10px] bg-indigo-900/20 text-indigo-300 border border-indigo-500/30 px-2 py-1 rounded uppercase tracking-wider">Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card border border-borderline rounded-2xl overflow-hidden shadow-2xl relative group hover:shadow-[0_0_30px_rgba(20,184,166,0.15)] transition-all duration-300 hover:-translate-y-1">
+                    <img src="assets/img/Ai_Interview.png" alt="AI Interview Platform" class="w-full h-48 object-cover object-top opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-lg font-bold text-white">AI Interview Prep Platform</h3>
+                            <div class="flex gap-3 text-gray-400">
+                                <a href="https://github.com/pravin-rathod-git/AI_Interview_Platform" target="_blank" class="hover:text-white transition-colors" title="Source Code"><i class='bx bxl-github text-xl'></i></a>
+                                <a href="https://ai-interview-platform-frontend-vmqm.onrender.com/" target="_blank" class="hover:text-teal-400 transition-colors" title="Live Website"><i class='bx bx-link-external text-xl'></i></a>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 h-16 line-clamp-3">AI-based platform for resume-driven interview question generation using OpenRouter API. Implemented credit-based usage and secure payments.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] bg-teal-900/20 text-teal-300 border border-teal-500/30 px-2 py-1 rounded uppercase tracking-wider">Node.js</span>
+                            <span class="text-[10px] bg-teal-900/20 text-teal-300 border border-teal-500/30 px-2 py-1 rounded uppercase tracking-wider">LLMs</span>
+                            <span class="text-[10px] bg-teal-900/20 text-teal-300 border border-teal-500/30 px-2 py-1 rounded uppercase tracking-wider">Razorpay</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card border border-borderline rounded-2xl overflow-hidden shadow-2xl relative group hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] transition-all duration-300 hover:-translate-y-1">
+                    <img src="assets/img/crop maturity detection.png" alt="Crop Maturity Edge AI" class="w-full h-48 object-cover object-top opacity-80 group-hover:opacity-100 transition-opacity">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-lg font-bold text-white">Crop Maturity Detection</h3>
+                            <div class="flex gap-3 text-gray-400">
+                                <a href="https://github.com/pravin-rathod-git/Crop-Maturity-Detection-using-Edge-AI-Tomato-Dragon-Fruit-" target="_blank" class="hover:text-white transition-colors" title="Source Code"><i class='bx bxl-github text-xl'></i></a>
+                                <a href="https://github.com/pravin-rathod-git/Crop-Maturity-Detection-using-Edge-AI-Tomato-Dragon-Fruit-" target="_blank" class="hover:text-amber-400 transition-colors" title="Live Website"><i class='bx bx-link-external text-xl'></i></a>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 h-16 line-clamp-3">Deep learning model achieving near perfect accuracy for crop maturity classification. Deployed on NVIDIA Jetson Nano with real-time inference via TensorRT.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] bg-amber-900/20 text-amber-300 border border-amber-500/30 px-2 py-1 rounded uppercase tracking-wider">PyTorch</span>
+                            <span class="text-[10px] bg-amber-900/20 text-amber-300 border border-amber-500/30 px-2 py-1 rounded uppercase tracking-wider">TensorRT</span>
+                            <span class="text-[10px] bg-amber-900/20 text-amber-300 border border-amber-500/30 px-2 py-1 rounded uppercase tracking-wider">Edge AI</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 border-t border-borderline/50 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">Let's Build Together</h2>
+            <p class="text-gray-400 mb-10 max-w-lg mx-auto">Currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            
+            <a href="mailto:pr819270@gmail.com" class="inline-block bg-transparent hover:bg-purple-900/20 text-purple-400 font-bold py-4 px-10 rounded-xl transition-all duration-300 border-2 border-purple-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] text-lg tracking-wide">
+                pr315rathod@gmail.com
+            </a>
+            
+            <p class="mt-8 text-gray-500 font-mono">+91 8446085203</p>
         </section>
     </main>
 
-    <!--===== FOOTER =====-->
-    <footer class="footer">
-        <p class="footer__title">PRAVIN RATHOD</p>
-        <div class="footer__social">
-            <a href="https://www.linkedin.com/in/pravin-rathod-237418303/" class="footer__icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/pravin-rathod-git" class="footer__icon" target="_blank"><i class='bx bxl-github'></i></a>
+    <footer class="border-t border-borderline bg-card py-8 text-center text-sm text-gray-500 font-mono">
+        <p class="mb-4">Designed & Built by Pravin Rathod</p>
+        <div class="flex justify-center gap-6 text-xl">
+            <a href="https://www.linkedin.com/in/pravin-rathod-237418303/" target="_blank" class="hover:text-[#0a66c2] transition-colors"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://github.com/pravin-rathod-git" target="_blank" class="hover:text-white transition-colors"><i class='bx bxl-github'></i></a>
         </div>
-        <p class="footer__copy">pr819270@gmail.com</p>
     </footer>
 
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!--===== MAIN JS =====-->
-    <script src="assets/js/main.js"></script>
 </body>
-
 </html>
